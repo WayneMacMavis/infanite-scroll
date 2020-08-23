@@ -18,7 +18,6 @@ function imageLoaded() {
         ready = true;
         loader.hidden = true;
         count = 15;
-        apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
     }
 }
 
