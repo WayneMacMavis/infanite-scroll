@@ -1,5 +1,9 @@
 const imageContainer = document.getElementById('image-container');
 const loader = document.getElementById('loader');
+const fwd = document.getElementById('forward');
+const button = document.getElementById('slide');
+const buttonRight = document.getElementById('slideRight');
+const buttonLeft = document.getElementById('slideLeft');
 
 let ready = false;
 let imagesLoaded = 0;
@@ -75,5 +79,20 @@ window.addEventListener('scroll', () => {
         getPhotos();
     }
 })
+
+buttonRight.onclick = function () {
+    ready = false;
+    imageContainer.scrollLeft += 1000;
+    getPhotos();
+        
+    
+};
+
+buttonLeft.onclick = function () {
+    ready = false;
+    imageContainer.scrollLeft -= 1000;
+    getPhotos();
+};
+
 
 getPhotos();

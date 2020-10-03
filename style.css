@@ -7,8 +7,8 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
-    font-family: 'Playfair Display', serif;
-    background-image: url(bg.jpg);
+    background-image: linear-gradient(to right, rgba(247, 239, 239, 0.527), rgba(0, 217, 255, 0.726));
+    overflow: hidden;
 }
 
 h1 {
@@ -43,7 +43,8 @@ h1 {
 .image-container {
     display: flex;
     margin: 10px 10px 10px 10px;
- }
+    overflow: hidden;
+}
 
 .image-container img {
     height: 75vh;
@@ -52,10 +53,40 @@ h1 {
     margin: 10px;
     margin-top: 70px;
     border: 3px solid rgba(70, 70, 139, 0.287);
+
 }
 
-img:hover {
-    height: 78vh;
+.slide-left {
+    color: rgb(0, 0, 0);
+    background: rgba(211, 209, 209, 0.4);
+    left: 0vw;
+}
+
+.slide-right {
+    color: rgb(0, 0, 0);
+    background: rgba(0, 217, 255, 0.4);
+    right: 0vw;
+}
+
+button {
+    cursor: pointer;
+    top: 40vh;
+    height: 80px;
+    width: 80px;
+    border: none;
+    border-radius: 10px 10px;
+    position: fixed;
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+button:focus {
+    outline: none;
 }
 
 /* Large smart phones */
